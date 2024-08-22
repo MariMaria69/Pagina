@@ -112,7 +112,7 @@ header {
     height: 70px;
     margin: 9px 80px 9px 80px;
   }
-.screach{
+.search{
   width: 400px;
   height: 45px;
   align-self: center;
@@ -121,7 +121,7 @@ header {
   border-radius: 9px;
   margin-left: 250px;  
 }  
-.screach > p{
+.search > p{
   padding-top: 0.80rem;
   padding-left: 4.5rem; 
 }
