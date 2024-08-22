@@ -51,9 +51,7 @@ img {
   font-weight: 200;
   font-style: normal;
 }
-.hide{
-  display: none;
-}
+
 
 body{
   background-color: #FFFF;
@@ -81,7 +79,9 @@ h4{
   margin-left: 4px;
   margin-top: 15px;
 }
+
 /*=========="Interatividade"=================*/
+
 
 li > a:hover{
   color: var(--colorText);
@@ -91,6 +91,25 @@ li > a:hover{
   font-size: 18px;
   transition: 250ms;
 }
+
+
+.lupa:hover .lupaInterna{
+  display: none;
+  
+}
+
+.lupa:hover .search{
+  width: 400px;
+  height: 45px;
+  align-self: center;
+  align-items: center;
+  text-align: left;
+  background-color: #FFFF;
+  border-radius: 9px;
+ 
+  padding-left: 10px; 
+  display: flex;
+}  
 
 
 
@@ -112,19 +131,28 @@ header {
     height: 70px;
     margin: 9px 80px 9px 80px;
   }
-.search{
-  width: 400px;
-  height: 45px;
-  align-self: center;
-  text-align: left;
-  background-color: #FFFF;
-  border-radius: 9px;
-  margin-left: 250px;  
-}  
-.search > p{
-  padding-top: 0.80rem;
-  padding-left: 4.5rem; 
-}
+  .lupaInterna{
+    background-color: white;
+      border-radius: 7px;
+      font-size: 30px;
+  }
+  .lupa{
+    display: flex;
+    align-items: center;
+    justify-items: end;
+    justify-self: end;
+    margin-left: 310px;
+  }
+
+  .search{
+    display: none;
+  }
+  input{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+  }
 nav{
   background-color: var(--navBackground);
   width: 100%;
@@ -207,7 +235,6 @@ nav > ul > li > a{
 
 .diferencial{
   display: flex;
-  align-self: center;
   width:98%;
   height: 621px;
   border-radius: 21px;
@@ -232,4 +259,87 @@ footer{
   flex-direction: row;
   justify-items: center;
   justify-content: center;
+}
+/*===============Media============*/
+
+@media screen and (max-width: 1024px){
+  
+  nav > ul > li {
+    padding: 10px 80px 9px 32px;
+  }
+
+  .about{
+    margin-left: 115px;
+  }
+
+  .imgInfo{
+    margin-right: 95px;
+  }
+} @media screen and (max-width: 912px){
+  .lupa{
+    margin-left: 255px;
+  }
+  nav > ul > li {
+    padding: 10px 80px 9px 20px;
+  }
+  .about {
+    margin-left: 40px;
+  }
+  .imgInfo {
+    margin-right: 30px;
+  }
+} @media screen and (max-width: 853px){
+  .lupa {
+    margin-left: 50px;
+  }
+  nav > ul > li {
+    padding: 10px 72px 9px 0px;
+  }
+  
+  .about{ 
+    margin-left: 195px;
+    height: max-content;
+    margin-bottom: 5px;
+  }
+  .info{
+    margin: 20px;
+    flex-direction: column-reverse;
+    justify-items: end;
+    height: min-content;
+  }    .imgInfo {
+    margin-right: 0px;
+    margin-top: 10px;
+}.textInfo {
+  margin-right: 0px;
+}
+#p1, #p2, #p3, #p4, #p5{
+  display: none;
+}
+#h4Um:hover > #p1{
+  display: block;
+}#h4dois:hover > #p2{
+  display: block;
+} #h4tres:hover > #p3{
+  display: block;
+} #h4quatro:hover > #p4{
+  display: block;
+} #h4cinco:hover > #p5{
+  display: block;
+}  
+} @media screen and (max-width: 700px){
+  nav {
+    display: none;
+  } #fund {
+    display: none;
+  } .about {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}.textAbout{
+  height: 520px;
+}.lupa {
+  margin-left: 0;
+} .lupa:hover .search {
+  width: 250px;
+
+}
 }
