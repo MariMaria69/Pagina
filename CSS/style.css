@@ -1,4 +1,235 @@
-header{
-    background-color: 3265FC;
-    position: fixed;
+@charset "UTF-8";
+/*==============RESET===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    
+ul {
+    list-style: none;
+  }
+    
+a {
+    text-decoration: none;
+  }
+    
+img {
+    width: 100%;
+    height: auto;
+
+  }
+  
+  /*=================VARIAVEIS===================*/
+:root{
+    --HeaderAndFooter: #3265FC;
+    --background: #5a83fc;
+    --colorTextLink: rgb(204, 249, 255);
+    --colorText: #001964;
+    --transitionColor: #8659FC;
+    --navBackground: rgba(29, 224, 251, 0.54);
+}
+
+.transition {
+  background-image:linear-gradient(to right , #FFFFFF, var(--transitionColor), #FFFFFF);
+  height: 2px;
+  width: 100%;
+  
+}
+
+.neonderthaw-regular {
+  font-family: "Neonderthaw", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.museomoderno-font {
+  font-family: "MuseoModerno", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.hide{
+  display: none;
+}
+
+body{
+  background-color: #FFFF;
+}
+
+p {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--colorText);
+  font-size: 13px;
+  margin: 5px;
+}
+
+h2{
+  text-align: center;
+  font-size: 50px;
+  margin: 15px;
+  color: var(--colorText);
+}
+
+h4{
+  color: var(--colorText);
+  margin-left: 4px;
+  margin-top: 15px;
+}
+/*=========="Interatividade"=================*/
+
+li > a:hover{
+  color: var(--colorText);
+  padding: 5px;
+  background-color: rgba(161, 244, 255, 0.349);
+  border-radius: 2px;
+  font-size: 18px;
+  transition: 250ms;
+}
+
+
+
+
+  /*===================Headear===================*/
+
+header {
+  /*position: fixed;*/
+  width: 100%;
+  background-color: var(--HeaderAndFooter);
+  
+}
+.header{   
+  display: flex; 
+    
+  }
+.logo {
+    width: 70px;
+    height: 70px;
+    margin: 9px 80px 9px 80px;
+  }
+.screach{
+  width: 400px;
+  height: 45px;
+  align-self: center;
+  text-align: left;
+  background-color: #FFFF;
+  border-radius: 9px;
+  margin-left: 250px;  
+}  
+.screach > p{
+  padding-top: 0.80rem;
+  padding-left: 4.5rem; 
+}
+nav{
+  background-color: var(--navBackground);
+  width: 100%;
+  height: 40px;
+  
+}
+nav > ul{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  
+}
+nav > ul > li {
+    padding: 10px 80px 9px 80px;
+    
+}
+nav > ul > li > a{
+  color: var(--colorTextLink);
+}
+
+/*==============About==============*/
+.about{
+  display: flex;
+  height: 783px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  margin-left: 250px;
+}
+
+#fund {
+  height: 502px;
+  width: 422px;
+  
+}
+
+.textAbout{
+  height: 502px;
+  width: 422px;
+  background-image:linear-gradient(to right , #fff,rgba(90, 131, 252, 0.67)) ;
+  
+}
+
+
+/*===========Info================*/
+
+.info{
+  display: flex;
+  height: 783px;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-items: center;
+  align-items: center;
+}
+.imgInfo{
+  text-align: center;
+  margin-right: 300px;
+}
+
+.imgInfo > img{
+  width: 329px;
+  height: 312px;
+  border-radius: 100%;
+  border: 1px solid var(--colorText);
+}
+
+.textInfo{
+  margin-right: 80px;
+  padding: 10px;
+  background-color: var(--background);
+  width: 450px;
+  height: min-content;
+
+}
+
+
+
+/*=============Diferencial============*/
+
+.diferencial{
+  display: flex;
+  align-self: center;
+  width:98%;
+  height: 621px;
+  border-radius: 21px;
+  background-color: rgba(90, 131, 252, 0.5);
+  padding: 15px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+
+/*=================Footer=================*/
+
+
+footer{
+  width: 100%;
+  background-color: var(--HeaderAndFooter);
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: center;
 }
