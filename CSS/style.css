@@ -250,7 +250,7 @@ nav > ul > li > a{
 /*=================Footer=================*/
 
 
-footer{
+.reflexao{
   width: 100%;
   background-color: var(--HeaderAndFooter);
   width: 100%;
@@ -259,7 +259,12 @@ footer{
   flex-direction: row;
   justify-items: center;
   justify-content: center;
+  text-align: center;
 }
+footer > h5{
+  text-align: center;
+}
+
 /*===============Media============*/
 
 @media screen and (max-width: 1024px){
@@ -311,6 +316,7 @@ footer{
     margin-top: 10px;
 }.textInfo {
   margin-right: 0px;
+  width: 100%;
 }
 #p1, #p2, #p3, #p4, #p5{
   display: none;
@@ -335,11 +341,12 @@ footer{
     margin-left: 50px;
     margin-bottom: 20px;
 }.textAbout{
-  height: 520px;
+  height: max-content;
+
 }.lupa {
   margin-left: 0;
 } .lupa:hover .search {
-  width: 250px;
+  width: 200px;
 
-}
+} 
 }
