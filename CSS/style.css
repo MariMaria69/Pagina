@@ -24,6 +24,7 @@ img {
 :root{
     --HeaderAndFooter: #3265FC;
     --background: #5a83fc;
+    --pesquisaBackgroud: #90acff;
     --colorTextLink: rgb(204, 249, 255);
     --colorText: #001964;
     --transitionColor: #8659FC;
@@ -92,32 +93,44 @@ li > a:hover{
   transition: 250ms;
 }
 
-
-.lupa:hover .lupaInterna{
-  display: none;
-  
-}
-
-.lupa:hover .search{
-  width: 400px;
-  height: 45px;
+.search{
+  width: 99%;
+  height: 150px;
   align-self: center;
   align-items: center;
   text-align: left;
-  background-color: #FFFF;
-  border-radius: 9px;
- 
+  background-color: var(--pesquisaBackgroud);
   padding-left: 10px; 
   display: flex;
+  margin-left: 5px;
+  margin-top: 5px;
+  
 }  
 
+
+input{
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  background-color: var(--pesquisaBackgroud);
+  color: black;
+}
+
+#pesquisa{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffffcd;
+  position: fixed;
+  z-index: 2;
+}
 
 
 
   /*===================Headear===================*/
 
 header {
-  /*position: fixed;*/
+  position: fixed;
   width: 100%;
   background-color: var(--HeaderAndFooter);
   
@@ -144,15 +157,6 @@ header {
     margin-left: 310px;
   }
 
-  .search{
-    display: none;
-  }
-  input{
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: 5px;
-  }
 nav{
   background-color: var(--navBackground);
   width: 100%;
@@ -317,20 +321,7 @@ footer > h5{
   margin-right: 0px;
   width: 100%;
 }
-#p1, #p2, #p3, #p4, #p5{
-  display: none;
-}
-#h4Um:hover > #p1{
-  display: block;
-}#h4dois:hover > #p2{
-  display: block;
-} #h4tres:hover > #p3{
-  display: block;
-} #h4quatro:hover > #p4{
-  display: block;
-} #h4cinco:hover > #p5{
-  display: block;
-}  
+
 } @media screen and (max-width: 700px){
   nav {
     display: none;
