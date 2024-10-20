@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
     
 ul {
@@ -47,6 +48,7 @@ img {
 
 
 .museomoderno-font {
+  margin-top: 150px;
   font-family: "MuseoModerno", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
@@ -80,6 +82,13 @@ h4{
   margin-left: 4px;
   margin-top: 15px;
 }
+.hide{
+  display: none !important;
+}
+
+.overFlow{
+  overflow: hidden;
+} 
 
 /*=========="Interatividade"=================*/
 
@@ -93,6 +102,7 @@ li > a:hover{
   transition: 250ms;
 }
 
+
 .search{
   width: 99%;
   height: 150px;
@@ -104,29 +114,85 @@ li > a:hover{
   display: flex;
   margin-left: 5px;
   margin-top: 5px;
-  
 }  
 
+#closeLoc{
+  display: flex;
+  width: 100%;
+  height: 10px;
+  flex-direction: row-reverse;
+}
 
+#close{
+  font-size: 24px !important;
+  text-align: left;
+  position: fixed;
+  background-color: var(--background);
+  border: 1px solid #001964;
+  border-radius: 100%;
+  margin-right: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+#close:hover{
+  background-color: var(--pesquisaBackgroud);
+}
+#lupaPes{
+  font-size: 36px !important;
+  cursor: default;
+}
 input{
   border: none;
   outline: none;
   width: 100%;
+  height: 100%;
   padding: 5px;
   background-color: var(--pesquisaBackgroud);
-  color: black;
+  font-size: 24px;
+  color: #FFFF;
+}
+
+input::placeholder{
+  font-size: 24px;
+  color: #FFFF;
 }
 
 #pesquisa{
   width: 100%;
-  height: 100%;
   background-color: #ffffffcd;
   position: fixed;
   z-index: 2;
+  height:100%; 
 }
 
+#produtos{
+  display: none;
+  justify-content: center;
+  background-color: #e5e5e5e0;
+  position: fixed;
+  width: 95%;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 550px;
+  z-index: 3;
+}
+#contPes{
+  width: 100%;
+}
 
-
+.liPesquisa{
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--colorText);
+}
+.liPesquisa:hover{
+  transition: 0.2s;
+  background-color: #d3d3d3;
+}
   /*===================Headear===================*/
 
 header {
@@ -137,25 +203,30 @@ header {
 }
 .header{   
   display: flex; 
-    
+  justify-content: flex-start;
   }
 .logo {
     width: 70px;
     height: 70px;
     margin: 9px 80px 9px 80px;
   }
-  .lupaInterna{
-    background-color: white;
-      border-radius: 7px;
-      font-size: 30px;
-  }
-  .lupa{
-    display: flex;
-    align-items: center;
-    justify-items: end;
-    justify-self: end;
-    margin-left: 310px;
-  }
+  .iconsHeader{
+    font-size: 30px !important;
+    color: var(--colorTextLink);
+    cursor: pointer;
+}
+.iconsHeader:hover{
+  transition: 0.2s;
+  color: #001964;
+  background-color: var(--navBackground);
+  border-radius: 2px;
+}
+.icons{
+  display: flex;
+  align-items: center;
+  justify-items: end;
+  justify-content: space-between;
+}
 
 nav{
   background-color: var(--navBackground);
@@ -178,7 +249,7 @@ nav > ul > li > a{
 }
 
 /*==============About==============*/
-.about{
+#about{
   display: flex;
   height: 783px;
   flex-direction: row;
@@ -204,7 +275,7 @@ nav > ul > li > a{
 
 /*===========Info================*/
 
-.info{
+#info{
   display: flex;
   height: 783px;
   flex-direction: row-reverse;
@@ -237,7 +308,7 @@ nav > ul > li > a{
 
 /*=============Diferencial============*/
 
-.diferencial{
+#diferencial{
   display: flex;
   width:98%;
   height: 621px;
@@ -254,7 +325,7 @@ nav > ul > li > a{
 /*=================Footer=================*/
 
 
-.reflexao{
+#navAbout4{
   background-color: var(--HeaderAndFooter);
   width: 100%;
   height: max-content;
@@ -262,11 +333,23 @@ nav > ul > li > a{
   flex-direction: row;
   justify-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: left;
+  border-radius: 21px;
 }
 footer > h5{
   text-align: center;
 }
+
+#textoreflexao{
+  width: 80%;
+  height: max-content;
+}
+
+
+#tituloreflexao{
+  margin-top: 30px;
+}
+
 
 /*===============Media============*/
 

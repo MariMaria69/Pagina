@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-br">
 <!--Trabalho Site PLB
     Nome: Marcelo Nascimento Mendes
     Nome: Anna Beatriz Alves Rossini
@@ -11,60 +11,82 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Neonderthaw&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>TechNova</title>
-  
 </head>
 <body>
     <header>
         
         <div class="header">
             <a href="#"><img src="img/Logo.png" alt="Logo da empresa" class="logo"></a>
-            <div class="lupa">
-                <span class="material-symbols-outlined lupaInterna">
+            <div class="icons">
+                <span class="material-symbols-outlined iconsHeader" onclick="pesquisa()">
                     search
                 </span>
+                <span class="material-symbols-outlined iconsHeader" onclick="menu()">
+                    menu
+                </span>
             </div>
+            
         </div>
         <div class="transition"></div>
         <nav>
             <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 1</a></li>
+                <li><a href="#navAbout">Technova</a></li>
+                <li><a href="#navAbout2">História</a></li>
+                <li><a href="#navAbout3">Diferencial</a></li>
+                <li><a href="#navAbout4">Reflexão</a></li>
             </ul>
         </nav>
         
     </header>
+
     <section id="pesquisa" class="hide">
-        <div class="search"> 
-            <span class="material-symbols-outlined">
+            <div id="closeLoc">
+                <span class="material-symbols-outlined" id="close" onclick="fechar()" >
+                close
+                </span>
+            </div>
+        <div class="search" onsubmit="return false;"> 
+            <span class="material-symbols-outlined" id="lupaPes" >
                 search
             </span>
-            <input type="search" placeholder="Pesquise Aqui" > 
+            <input type="search" id="buscar" placeholder="Pesquise Aqui" > 
+            <div id="produtos">
+                <ul id="contPes">
+                    <li><a href="http://" class="liPesquisa" onclick="fechar()" >Computador</a></li>
+                    <li><a href="http://" class="liPesquisa" onclick="fechar()" >Memoria RAM</a></li>
+                    <li><a href="http://" class="liPesquisa" onclick="fechar()" >Placa Mae</a></li>
+                    <li><a href="http://" class="liPesquisa" onclick="fechar()" >Processador</a></li>
+                    <li><a href="http://" class="liPesquisa" onclick="fechar()" >Gabinete</a></li>
+                    <li><a href="http://" class="liPesquisa" onclick="fechar()" >Teclado</a></li>
+                    <li><a href="http://" class="liPesquisa" onclick="fechar()" >Mouse</a></li>
+                    <li><a href="http://" class="liPesquisa" onclick="fechar()" >MousePad</a></li>
+                    <li><a href="http://" class="liPesquisa" onclick="fechar()" >Microfone</a></li>
+                    <li><a href="http://" class="liPesquisa" onclick="fechar()" >Camera</a></li>
+                </ul>
+            </div>
         </div>
         <div class="transition"></div>
-
+        
     </section>
     
     <section id="menu" class="hide">
         <ul>
-            <li><a href="#" onclick="linkMenu()">Link 1</a></li>
-            <li><a href="#" onclick="linkMenu()">Link 1</a></li>
-            <li><a href="#" onclick="linkMenu()">Link 1</a></li>
-            <li><a href="#" onclick="linkMenu()">Link 1</a></li>
-            <li><a href="#" onclick="linkMenu()">Link 1</a></li>
-            <li><a href="#" onclick="linkMenu()">Link 1</a></li>
+            <li><a href="#navAbout">Technova</a></li>
+            <li><a href="#navAbout2">História</a></li>
+            <li><a href="#navAbout3">Diferencial</a></li>
+            <li><a href="#navAbout4">Reflexão</a></li>
         </ul>
     </section>
+
     <main>
-        <div class="transition"></div>
+         
+        <div class="transition" id="navAbout"></div>
         <h2 class="museomoderno-font">TechNova</h2>
-        <section class="about">
+        <section id="about">
            
            <img src="img/code.png" alt="um computador com uma codação na tela" id="fund">
             <div class="textAbout">    
@@ -80,11 +102,11 @@
             </div>        
         </section>
         
-        <div class="transition"></div>    
+        <div class="transition" id="navAbout2"></div>    
         
         <h2 class="museomoderno-font">Aqui inicia nossa historia <strong class="neonderthaw-regular">!</strong></h2>
 
-        <section class="info">
+        <section id="info">
             <div class="imgInfo">    
                 <img src="img/fundador.jpg" alt="foto do fundador da technova">
                 <p id="coment">foto do fundador</p>
@@ -109,11 +131,11 @@
                 
         </section>
 
-        <div class="transition"></div>
+        <div class="transition" id="navAbout3"></div>
         
         <h2 class="museomoderno-font">Diferencial</h2>
         
-        <section class="diferencial">
+        <section id="diferencial">
             <div class="left">
                 <div id="h4Um">
                     <h4 >Sustentabilidade</h4> 
@@ -153,9 +175,9 @@
     </main>
     
     <footer>
-        <div class="reflexao ">
-            <h2 class="museomoderno-font">Reflexão</h2>
-            <p>
+        <div id="navAbout4">
+            <h2 class="museomoderno-font" id="tituloreflexao">Reflexão</h2>
+            <p id="textoreflexao">
                 É visivel um avanço nas aplicações envolvendo a pratica no html em sua semantica e preparo de marcações corretas, toda essa pratica colaborou de forma positiva para que tenhamos aptidão em aplicar nossos conhecimentos de forma mais livre e confiante, em HTML sinto uma grande melhora em estruturação, ainda com erros, porem melhor do que nos ja realizavamos, em CSS a noção de desing e organização ouve uma grande mudança, alem de entedermos novas funções, alem de conseguirmos trabalhar bem em equipe tendo uma boa troca de ideias e informações, mas em essencial houve uma melhora em sua maioria da organização de passos na montagem do site, por onde começar e por onde terminar 
             </p>
         </div>
@@ -163,5 +185,7 @@
 
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
+
