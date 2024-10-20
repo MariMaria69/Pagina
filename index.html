@@ -25,7 +25,7 @@
                 <span class="material-symbols-outlined iconsHeader" onclick="pesquisa()">
                     search
                 </span>
-                <span class="material-symbols-outlined iconsHeader" onclick="menu()">
+                <span class="material-symbols-outlined iconsHeader menuH" onclick="menu()">
                     menu
                 </span>
             </div>
@@ -74,12 +74,15 @@
     </section>
     
     <section id="menu" class="hide">
-        <ul>
-            <li><a href="#navAbout">Technova</a></li>
-            <li><a href="#navAbout2">História</a></li>
-            <li><a href="#navAbout3">Diferencial</a></li>
-            <li><a href="#navAbout4">Reflexão</a></li>
+        <ul id="ulMenu">
+            <li class="liMenu"><a href="#navAbout"  onclick="link()">Technova</a></li>
+            <li class="liMenu"><a href="#navAbout2" onclick="link()">História</a></li>
+            <li class="liMenu"><a href="#navAbout3" onclick="link()">Diferencial</a></li>
+            <li class="liMenu"><a href="#navAbout4" onclick="link()">Reflexão</a></li>
         </ul>
+        <span class="material-symbols-outlined" id="close" onclick="fecharMenu()" >
+            close
+        </span>
     </section>
 
     <main>
@@ -107,28 +110,29 @@
         <h2 class="museomoderno-font">Aqui inicia nossa historia <strong class="neonderthaw-regular">!</strong></h2>
 
         <section id="info">
-            <div class="imgInfo">    
-                <img src="img/fundador.jpg" alt="foto do fundador da technova">
-                <p id="coment">foto do fundador</p>
+            <div id="contInfo">    
+                <div class="imgInfo">    
+                    <img src="img/fundador.jpg" alt="foto do fundador da technova">
+                    <p id="coment">foto do fundador</p>
+                </div>
+                <div class="textInfo">
+                    <p>
+                        A TechNova foi fundada em 2023, com o objetivo de revolucionar o mercado de tecnologia. Tudo começou na garagem de um dos fundadores, onde um grupo de amigos apaixonados por inovação e tecnologia decidiu transformar suas ideias em realidade. Inspirados por gigantes como Apple, Intel e Positivo, esses visionários queriam criar produtos que não apenas atendem às necessidades dos consumidores, mas também superam suas expectativas.
+                    </p>   
+                    <p> 
+                        Desde o início, a TechNova focou em criar soluções tecnológicas que fossem acessíveis, eficientes e inovadoras. Com um espírito empreendedor e uma determinação inabalável, os fundadores investiram todas as suas economias e trabalharam incansavelmente para desenvolver os primeiros protótipos de seus produtos.
+                    </p>  
+                    <p>   
+                        Em pouco tempo, a empresa começou a ganhar reconhecimento pelo seu compromisso com a qualidade e a inovação. O lançamento do primeiro produto da TechNova, um dispositivo portátil de última geração, foi um grande sucesso, estabelecendo a empresa como uma nova força no mercado de tecnologia.
+                    </p> 
+                    <p>    
+                        A TechNova continuou a crescer e evoluir, sempre guiada pela missão de melhorar a vida das pessoas através da tecnologia. Hoje, a empresa oferece uma ampla gama de produtos, desde computadores e smartphones até dispositivos inteligentes para casas e escritórios. Com uma equipe talentosa e dedicada, a TechNova continua a explorar novas fronteiras da tecnologia, mantendo-se fiel aos valores de inovação, qualidade e acessibilidade que nortearam sua fundação.
+                    </p>
+                    <p>    
+                        A jornada da TechNova é uma prova de que, com visão, paixão e trabalho duro, é possível transformar sonhos em realidade e deixar uma marca indelével no mundo da tecnologia.
+                    </p>
+                </div>
             </div>
-            <div class="textInfo">
-                <p>
-                    A TechNova foi fundada em 2023, com o objetivo de revolucionar o mercado de tecnologia. Tudo começou na garagem de um dos fundadores, onde um grupo de amigos apaixonados por inovação e tecnologia decidiu transformar suas ideias em realidade. Inspirados por gigantes como Apple, Intel e Positivo, esses visionários queriam criar produtos que não apenas atendem às necessidades dos consumidores, mas também superam suas expectativas.
-                </p>   
-                <p> 
-                    Desde o início, a TechNova focou em criar soluções tecnológicas que fossem acessíveis, eficientes e inovadoras. Com um espírito empreendedor e uma determinação inabalável, os fundadores investiram todas as suas economias e trabalharam incansavelmente para desenvolver os primeiros protótipos de seus produtos.
-                </p>  
-                <p>   
-                    Em pouco tempo, a empresa começou a ganhar reconhecimento pelo seu compromisso com a qualidade e a inovação. O lançamento do primeiro produto da TechNova, um dispositivo portátil de última geração, foi um grande sucesso, estabelecendo a empresa como uma nova força no mercado de tecnologia.
-                </p> 
-                <p>    
-                    A TechNova continuou a crescer e evoluir, sempre guiada pela missão de melhorar a vida das pessoas através da tecnologia. Hoje, a empresa oferece uma ampla gama de produtos, desde computadores e smartphones até dispositivos inteligentes para casas e escritórios. Com uma equipe talentosa e dedicada, a TechNova continua a explorar novas fronteiras da tecnologia, mantendo-se fiel aos valores de inovação, qualidade e acessibilidade que nortearam sua fundação.
-                </p>
-                <p>    
-                    A jornada da TechNova é uma prova de que, com visão, paixão e trabalho duro, é possível transformar sonhos em realidade e deixar uma marca indelével no mundo da tecnologia.
-                </p>
-            </div>
-                
         </section>
 
         <div class="transition" id="navAbout3"></div>

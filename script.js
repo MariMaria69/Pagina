@@ -31,3 +31,21 @@ function fechar(){
     secPes.classList.add('hide')
     body.classList.remove('overFlow')
 }
+
+/*=======MENU=======*/
+const secMenu = document.getElementById('menu')
+
+function menu(){
+    secMenu.classList.remove('hide')
+    body.classList.add('overFlow')
+}
+
+function link(){
+    secMenu.classList.add('hide')
+    body.classList.remove('overFlow')
+}
+
+function fecharMenu(){
+    secMenu.classList.add('hide')
+    body.classList.remove('overFlow')
+}

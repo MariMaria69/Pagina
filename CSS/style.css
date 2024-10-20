@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*==============RESET===============*/
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -60,7 +60,7 @@ body{
   background-color: #FFFF;
 }
 
-p {
+p, a {
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -83,6 +83,9 @@ h4{
   margin-top: 15px;
 }
 .hide{
+  display: none !important;
+}
+.menuH{
   display: none !important;
 }
 
@@ -157,6 +160,8 @@ input::placeholder{
   color: #FFFF;
 }
 
+
+
 #pesquisa{
   width: 100%;
   background-color: #ffffffcd;
@@ -193,6 +198,41 @@ input::placeholder{
   transition: 0.2s;
   background-color: #d3d3d3;
 }
+
+#menu{
+  width: 100%;
+  height: 100%;
+  background-color: var(--HeaderAndFooter);
+  position: fixed;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#ulMenu{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.liMenu{
+  height: 100px;
+}
+
+.liMenu > a{
+  font-size: 36px;
+}
+
+.liMenu > a:hover{
+  color: var(--colorText);
+  padding: 5px;
+  background-color: rgba(161, 244, 255, 0.349);
+  border-radius: 2px;
+  font-size: 60px;
+  transition: 250ms;
+}
+
   /*===================Headear===================*/
 
 header {
@@ -222,10 +262,12 @@ header {
   border-radius: 2px;
 }
 .icons{
+  margin-right: 10px;
   display: flex;
+  width: 100%;
   align-items: center;
   justify-items: end;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 nav{
@@ -251,12 +293,13 @@ nav > ul > li > a{
 /*==============About==============*/
 #about{
   display: flex;
-  height: 783px;
+  height: max-content;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-items: center;
-  margin-left: 250px;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 #fund {
@@ -277,15 +320,22 @@ nav > ul > li > a{
 
 #info{
   display: flex;
-  height: 783px;
+  height: max-content;
+  margin-bottom: 10px;
   flex-direction: row-reverse;
-  align-items: center;
   justify-items: center;
   align-items: center;
 }
+#contInfo{
+  display: flex;
+  width: 98%;
+  height: max-content;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+}
 .imgInfo{
   text-align: center;
-  margin-right: 300px;
 }
 
 .imgInfo > img{
@@ -296,7 +346,6 @@ nav > ul > li > a{
 }
 
 .textInfo{
-  margin-right: 80px;
   padding: 10px;
   background-color: var(--background);
   width: 450px;
@@ -311,7 +360,7 @@ nav > ul > li > a{
 #diferencial{
   display: flex;
   width:98%;
-  height: 621px;
+  height: max-content;
   border-radius: 21px;
   background-color: rgba(90, 131, 252, 0.5);
   padding: 15px;
@@ -354,72 +403,18 @@ footer > h5{
 /*===============Media============*/
 
 @media screen and (max-width: 1024px){
-  
-  nav > ul > li {
-    padding: 10px 80px 9px 32px;
-  }
 
-  .about{
-    margin-left: 115px;
-  }
-
-  .imgInfo{
-    margin-right: 95px;
-  }
-} @media screen and (max-width: 912px){
-  .lupa{
-    margin-left: 255px;
-  }
-  nav > ul > li {
-    padding: 10px 80px 9px 20px;
-  }
-  .about {
-    margin-left: 40px;
-  }
-  .imgInfo {
-    margin-right: 30px;
-  }
-} @media screen and (max-width: 853px){
-  .lupa {
-    margin-left: 50px;
-  }
-  nav > ul > li {
-    padding: 10px 72px 9px 0px;
-  }
-  
-  .about{ 
-    margin-left: 195px;
-    height: max-content;
-    margin-bottom: 5px;
-  }
-  .info{
-    margin: 20px;
-    flex-direction: column-reverse;
-    justify-items: end;
-    height: min-content;
-  }    .imgInfo {
-    margin-right: 0px;
-    margin-top: 10px;
-}.textInfo {
-  margin-right: 0px;
-  width: 100%;
-}
-
-} @media screen and (max-width: 700px){
-  nav {
-    display: none;
-  } #fund {
-    display: none;
-  } .about {
-    margin-left: 50px;
-    margin-bottom: 20px;
-}.textAbout{
-  height: max-content;
-
-}.lupa {
-  margin-left: 0;
-} .lupa:hover .search {
-  width: 200px;
-
-} 
+}  @media  screen and (max-width: 850px) {
+    #about{
+      flex-direction: column;
+    }
+    #contInfo{
+      flex-direction: column;
+    }
+    .menuH{
+      display: block !important;
+    }
+    nav{
+      display: none;
+    }
 }
