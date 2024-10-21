@@ -49,3 +49,26 @@ function fecharMenu(){
     secMenu.classList.add('hide')
     body.classList.remove('overFlow')
 }
+
+/*=======Diferencial========*/
+const suste = document.getElementById('sust')
+const inove = document.getElementById('inov')
+const qualie = document.getElementById('quali')
+const suportes = document.getElementById('suporte')
+const segurancas = document.getElementById('seguranca')
+
+
+
+
+
+function sust() {
+    suste.classList.toggle('hide')
+} function inov(){
+    inove.classList.toggle('hide')
+} function quali(){
+    qualie.classList.toggle('hide')
+} function suporte(){
+    suportes.classList.toggle('hide')
+} function seguranca(){
+    segurancas.classList.toggle('hide')
+}

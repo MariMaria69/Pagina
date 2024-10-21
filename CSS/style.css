@@ -233,6 +233,21 @@ input::placeholder{
   transition: 250ms;
 }
 
+#mobile{
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+.textMob{
+  width: 95%;
+  background-color: rgba(90, 131, 252, 0.5);
+  height: 92%;
+}
+
+.titleMob{
+  cursor: pointer;
+}
+
   /*===================Headear===================*/
 
 header {
@@ -417,4 +432,14 @@ footer > h5{
     nav{
       display: none;
     }
+} @media screen and (max-width: 600px) {
+  #mobile{
+    display: flex;
+  }
+  #diferencial{
+    justify-content: center;
+  }
+  .right, .left {
+    display: none;
+  }
 }
