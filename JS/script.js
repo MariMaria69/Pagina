@@ -72,3 +72,4 @@ function sust() {
 } function seguranca(){
     segurancas.classList.toggle('hide')
 }
+

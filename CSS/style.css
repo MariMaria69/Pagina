@@ -92,6 +92,17 @@ h4{
 .overFlow{
   overflow: hidden;
 } 
+#navInt{
+  color: var(--colorTextLink);
+}
+#navInt:hover{
+  color: var(--colorText);
+  background-color: var(--navBackground);
+  border-radius: 2px;
+  font-size: 24px;
+  padding: 5px;
+  transition: 250ms;
+}
 
 /*=========="Interatividade"=================*/
 
@@ -159,8 +170,6 @@ input::placeholder{
   font-size: 24px;
   color: #FFFF;
 }
-
-
 
 #pesquisa{
   width: 100%;

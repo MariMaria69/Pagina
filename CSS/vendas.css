@@ -1,0 +1,547 @@
+@charset "UTF-8";
+/*==============RESET===============*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+    
+ul {
+    list-style: none;
+  }
+    
+a {
+    text-decoration: none;
+  }
+    
+img {
+    width: 100%;
+    height: auto;
+
+  }
+  
+  /*=================VARIAVEIS===================*/
+:root{
+    --HeaderAndFooter: #3265FC;
+    --background: #5a83fc;
+    --pesquisaBackgroud: #90acff;
+    --colorTextLink: rgb(204, 249, 255);
+    --colorText: #001964;
+    --transitionColor: #8659FC;
+    --navBackground: rgba(29, 224, 251, 0.54);
+    --cupons: #008D6D;
+}
+
+.transition {
+  background-image:linear-gradient(to right , #FFFFFF, var(--transitionColor), #FFFFFF);
+  height: 2px;
+  width: 100%;
+}
+
+.neonderthaw-regular {
+  font-family: "Neonderthaw", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.museomoderno-font {
+  margin-top: 150px;
+  font-family: "MuseoModerno", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+body{
+  background-color: #FFFF;
+}
+
+p, a {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--colorText);
+  font-size: 13px;
+  margin: 5px;
+}
+
+h2{
+  text-align: center;
+  font-size: 50px;
+  margin: 15px;
+  color: var(--colorText);
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+h3{
+  color: var(--colorText);
+  font-size: 24px;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h4{
+  color: var(--colorText);
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 4px;
+  margin-top: 15px;
+}
+
+.container{
+  width: 100%;
+  height: min-content;
+}
+
+.hide{
+  display: none !important;
+}
+.menuH{
+  display: none !important;
+}
+
+.overFlow{
+  overflow: hidden;
+} 
+
+#navInt{
+  color: var(--colorTextLink);
+}
+
+#navInt:hover{
+  color: var(--colorText);
+  background-color: var(--navBackground);
+  border-radius: 2px;
+  font-size: 24px;
+  padding: 5px;
+  transition: 250ms;
+}
+/*=========="Interatividade"=================*/
+
+
+li > a:hover{
+  color: var(--colorText);
+  padding: 5px;
+  background-color: rgba(161, 244, 255, 0.349);
+  border-radius: 2px;
+  font-size: 18px;
+  transition: 250ms;
+}
+
+
+.search{
+  width: 99%;
+  height: 150px;
+  align-self: center;
+  align-items: center;
+  text-align: left;
+  background-color: var(--pesquisaBackgroud);
+  padding-left: 10px; 
+  display: flex;
+  margin-left: 5px;
+  margin-top: 5px;
+}  
+
+#closeLoc{
+  display: flex;
+  width: 100%;
+  height: 10px;
+  flex-direction: row-reverse;
+}
+
+#close{
+  font-size: 24px !important;
+  text-align: left;
+  position: fixed;
+  background-color: var(--background);
+  border: 1px solid #001964;
+  border-radius: 100%;
+  margin-right: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+#close:hover{
+  background-color: var(--pesquisaBackgroud);
+}
+#lupaPes{
+  font-size: 36px !important;
+  cursor: default;
+}
+input{
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background-color: var(--pesquisaBackgroud);
+  font-size: 24px;
+  color: #FFFF;
+}
+
+input::placeholder{
+  font-size: 24px;
+  color: #FFFF;
+}
+
+#pesquisa{
+  width: 100%;
+  background-color: #ffffffcd;
+  position: fixed;
+  z-index: 2;
+  height:100%; 
+}
+
+
+#produtos{
+  display: none;
+  justify-content: center;
+  background-color: #e5e5e5e0;
+  position: fixed;
+  width: 95%;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 550px;
+  z-index: 3;
+}
+#contPes{
+  width: 100%;
+}
+
+.liPesquisa{
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--colorText);
+}
+.liPesquisa:hover{
+  transition: 0.2s;
+  background-color: #d3d3d3;
+}
+
+#menu{
+  width: 100%;
+  height: 100%;
+  background-color: var(--HeaderAndFooter);
+  position: fixed;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#ulMenu{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.liMenu{
+  height: 100px;
+}
+
+.liMenu > a{
+  font-size: 36px;
+}
+
+.liMenu > a:hover{
+  color: var(--colorText);
+  padding: 5px;
+  background-color: rgba(161, 244, 255, 0.349);
+  border-radius: 2px;
+  font-size: 60px;
+  transition: 250ms;
+}
+
+#mobile{
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+.textMob{
+  width: 95%;
+  background-color: rgba(90, 131, 252, 0.5);
+  height: 92%;
+}
+
+.titleMob{
+  cursor: pointer;
+}
+
+
+  /*===================Headear===================*/
+
+  header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--HeaderAndFooter);
+
+  }
+  .header{   
+    display: flex; 
+    justify-content: flex-start;
+    }
+  .logo {
+      width: 70px;
+      height: 70px;
+      margin: 9px 80px 9px 80px;
+    }
+    .iconsHeader{
+      font-size: 30px !important;
+      color: var(--colorTextLink);
+      cursor: pointer;
+  }
+  .iconsHeader:hover{
+    transition: 0.2s;
+    color: #001964;
+    background-color: var(--navBackground);
+    border-radius: 2px;
+  }
+  .icons{
+    margin-right: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-items: end;
+    justify-content: flex-end;
+  }
+  
+  nav{
+    background-color: var(--navBackground);
+    width: 100%;
+    height: 40px;
+    
+  }
+  nav > ul{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+  }
+  nav > ul > li {
+      padding: 10px 80px 9px 80px;
+      
+  }
+  nav > ul > li > a{
+    color: var(--colorTextLink);
+  }
+
+
+  /*PRODUTOS*/
+  #produto{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  #video{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #texto{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  /*Cupons*/
+
+  #descontos{
+    margin: 10px 0 10px 0px;
+    background-color: var(--cupons);
+    padding: 20px;
+    border-radius: 10px;
+
+  }
+
+  /*IMAGENS*/
+  .imgVenda{
+    width: 400px;
+    height: 400px;
+  }
+
+  .carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  } 
+
+  /*===============Media============*/
+
+@media screen and (max-width: 1024px){
+
+}  @media  screen and (max-width: 850px) {
+    .menuH{
+      display: block !important;
+    }
+    nav{
+      display: none;
+    }
+} @media screen and (max-width: 600px) {
+  #mobile{
+    display: flex;
+  }
+  #produto{
+    flex-direction: column;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+ } @media screen and (max-width: 430px){
+  .logo {
+    width: 70px;
+    height: 70px;
+    margin: 9px 0 9px 80px;
+  }
+ }
+
+.containerVendas {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel.slide {
+  transition: transform 0.6s ease;
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.carousel-dark .carousel-control-prev-icon,
+.carousel-dark .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: relative;
+  display: none;
+  width: 100%;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.d-block {
+  display: block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5%;
+  height: 100%;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-size: 100% 100%;
+}
+
+.carousel-control-prev-icon {
+  background-image: url(../img/seta-esquerda.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.carousel-control-next-icon {
+  background-image: url('../img/seta-direita.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* Estilos para o contêiner dos indicadores */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;  /* Ajuste a posição vertical conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Estilos para cada botão */
+.carousel-indicators button {
+  border: none;
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;  /* Espaço entre os indicadores */
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo do indicador */
+  transition: background-color 0.2s ease;
+}
+
+/* Estilo para o botão ativo (indicador do slide atual) */
+.carousel-indicators .active {
+  background-color: #ffffff;  /* Cor do indicador ativo */
+}
+
+/* Efeito de hover (quando o usuário passa o mouse) */
+.carousel-indicators button:hover {
+  background-color: rgba(255, 255, 255, 0.8);  /* Altera a cor ao passar o mouse */
+}
