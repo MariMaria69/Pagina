@@ -82,6 +82,11 @@ h4{
   margin-left: 4px;
   margin-top: 15px;
 }
+#QRcode{
+  width: 25%;
+  height: 25%;
+}
+
 .hide{
   display: none !important;
 }
