@@ -82,10 +82,7 @@ h4{
   margin-left: 4px;
   margin-top: 15px;
 }
-#QRcode{
-  width: 25%;
-  height: 25%;
-}
+
 
 .hide{
   display: none !important;
@@ -393,7 +390,7 @@ nav > ul > li > a{
   border-radius: 21px;
   background-color: rgba(90, 131, 252, 0.5);
   padding: 15px;
-  margin-left: 12px;
+  margin-left: 4px;
   margin-right: 12px;
   margin-bottom: 15px;
   align-items: center;
@@ -418,14 +415,18 @@ footer > h5{
   text-align: center;
 }
 
-#textoreflexao{
-  width: 80%;
-  height: max-content;
+footer{
+  background-color: var(--HeaderAndFooter);
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-#tituloreflexao{
-  margin-top: 30px;
+#QRcode{
+  width: 150px;
+  height:150px;
 }
 
 
@@ -447,6 +448,13 @@ footer > h5{
       display: none;
     }
 } @media screen and (max-width: 600px) {
+  #fund {
+    height: min-content;
+    width: 100%;
+}.textAbout, .textInfo {
+  height: min-content;
+  width: 100%;
+}
   #mobile{
     display: flex;
   }
