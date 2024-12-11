@@ -34,27 +34,6 @@ img {
     --cupons: #008D6D;
 }
 
-.transition {
-  background-image:linear-gradient(to right , #FFFFFF, var(--transitionColor), #FFFFFF);
-  height: 2px;
-  width: 100%;
-}
-
-.neonderthaw-regular {
-  font-family: "Neonderthaw", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-
-.museomoderno-font {
-  margin-top: 150px;
-  font-family: "MuseoModerno", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-}
 
 
 body{
@@ -103,8 +82,7 @@ h4{
 /*===================Headear===================*/
 
 header {
-    z-index: 1;
-    position: fixed; 
+    z-index: 1; 
     width: 100%;
     background-color: var(--HeaderAndFooter);
   }
@@ -137,12 +115,7 @@ header {
     justify-content: flex-end;
   }
   
-  nav{
-    background-color: var(--navBackground);
-    width: 100%;
-    height: 40px;
-    
-  }
+
   nav > ul{
     align-items: center;
     display: flex;
@@ -155,4 +128,89 @@ header {
   }
   nav > ul > li > a{
     color: var(--colorTextLink);
+  }
+  
+
+  /*----------PRODUTOS----------*/ 
+  #imgLogo{
+    width: 70px;
+  }
+
+
+  .containers {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .produtos{
+    display: block;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    background-color:var(--pesquisaBackgroud);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(101, 103, 226, 0.847);
+    overflow: hidden;
+    transition: transform 0.3s;
+    margin: 1%;
+    width: 50%;
+    /*border: 1px solid black;*/
+  }
+
+.produtos img{
+  width: 200px;
+  border-radius: 10%;
+  height: 200px;
+}
+
+.textosprodutos{
+  margin: 1%;
+  background-color: #cdd0e9;
+  border-radius: 10px;
+  padding: 1%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/*----------MEDIA----------*/ 
+@media only screen and (max-width: 768px) {
+
+  /*----------MEDIA PRODUTOS----------*/ 
+    .containers{
+      display: flex;
+      flex-direction: column;
+      margin: 1%;
+    }
+  
+    .produtos{
+      display: flex;
+      background: #EFD7DF;
+      padding: 10px;
+      justify-content: baseline;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(226, 101, 170, 0.847);
+      margin: 2%;
+      border: 1px solid black;
+  }
+  
+  .textosprodutos{
+    margin: 1%;
+    color: purple;
+  }
+  
+  .textosprodutos > p {
+    text-align: left;
+  }
+  
+  .produtos img{
+    display: inline;
+    width: 150px;
+    border-radius: 10%;
+  }
+  
   }
