@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/*==============RESET===============*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+    
+ul {
+    list-style: none;
+  }
+    
+a {
+    text-decoration: none;
+  }
+    
+img {
+    width: 100%;
+    height: auto;
+
+  }
+
+  
+  /*=================VARIAVEIS===================*/
+:root{
+    --HeaderAndFooter: #3265FC;
+    --background: #5a83fc;
+    --pesquisaBackgroud: #90acff;
+    --colorTextLink: rgb(204, 249, 255);
+    --colorText: #001964;
+    --transitionColor: #8659FC;
+    --navBackground: rgba(29, 224, 251, 0.54);
+    --cupons: #008D6D;
+}
+
+.transition {
+  background-image:linear-gradient(to right , #FFFFFF, var(--transitionColor), #FFFFFF);
+  height: 2px;
+  width: 100%;
+}
+
+.neonderthaw-regular {
+  font-family: "Neonderthaw", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.museomoderno-font {
+  margin-top: 150px;
+  font-family: "MuseoModerno", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+body{
+  background-color: #FFFF;
+}
+
+p, a {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--colorText);
+  font-size: 13px;
+  margin: 5px;
+}
+
+h2{
+  text-align: center;
+  font-size: 50px;
+  margin: 15px;
+  color: var(--colorText);
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+h3{
+  color: var(--colorText);
+  font-size: 24px;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h4{
+  color: var(--colorText);
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 4px;
+  margin-top: 15px;
+}
+
+/*===================Headear===================*/
+
+header {
+    z-index: 1;
+    position: fixed; 
+    width: 100%;
+    background-color: var(--HeaderAndFooter);
+  }
+  .header{   
+    display: flex; 
+    justify-content: flex-start;
+    }
+  .logo {
+      width: 70px;
+      height: 70px;
+      margin: 9px 80px 9px 80px;
+    }
+    .iconsHeader{
+      font-size: 30px !important;
+      color: var(--colorTextLink);
+      cursor: pointer;
+  }
+  .iconsHeader:hover{
+    transition: 0.2s;
+    color: #001964;
+    background-color: var(--navBackground);
+    border-radius: 2px;
+  }
+  .icons{
+    margin-right: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-items: end;
+    justify-content: flex-end;
+  }
+  
+  nav{
+    background-color: var(--navBackground);
+    width: 100%;
+    height: 40px;
+    
+  }
+  nav > ul{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+  }
+  nav > ul > li {
+      padding: 10px 80px 9px 80px;
+      
+  }
+  nav > ul > li > a{
+    color: var(--colorTextLink);
+  }
