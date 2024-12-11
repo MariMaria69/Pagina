@@ -265,6 +265,7 @@ header {
   position: fixed;
   width: 100%;
   background-color: var(--HeaderAndFooter);
+  z-index: 3;
   
 }
 .header{   
