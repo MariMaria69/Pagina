@@ -380,12 +380,12 @@ nav > ul > li > a{
 
 #diferencial{
   display: flex;
-  width:98%;
+  width:100%;
   height: max-content;
   background-color: rgba(90, 131, 252, 0.5);
   padding: 20px 35px 20px 30px;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-bottom: 50px;
+  margin-top: 30px;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -440,14 +440,14 @@ footer{
 #email{
   display: flex;
   border: 1px solid #001964;
-  width: 90%;
+  width: 70%;
   font-size: 16px;
   border-radius:5px;
   outline: none;
+  margin-left: 5px;
 }
 
 #email button{
-  padding: 10px 15px;
   font-size: 16px;
   border: none;
   background-color: var(--pesquisaBackgroud);
@@ -515,6 +515,10 @@ footer{
       display: none;
     }
 } @media screen and (max-width: 600px) {
+
+  .header a{
+    margin-left: -10px;
+  }
   #fund {
     height: min-content;
     width: 100%;
@@ -533,6 +537,29 @@ footer{
   }
 
   .inicio{
+    height: 600px;
+    margin-top: 0px;
+  }
+
+  .dife{
     display: none;
+  }
+
+  #final{
+    display: block;
+  }
+
+  #QRcode{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 150px;
+    height:150px;
+    margin-left: 25%;
+  }
+
+  #redes{
+    margin-left: 15%;
+    display: flex;
+    width: 5%;
   }
 }
