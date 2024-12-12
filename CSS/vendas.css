@@ -400,6 +400,9 @@ input::placeholder{
     height: 300px;
   }
 
+  #textosdesc{
+    display: none;
+  }
  
 
   /*IMAGENS*/
@@ -440,6 +443,18 @@ input::placeholder{
     align-items: center;
     margin-bottom: 20px;
   }
+  .carousel-inner {
+    width: 90vw;
+   }
+  
+   #descontos{
+    margin: 0%;
+   }
+
+   #textosdesc{
+    display: block;
+  }
+
  } @media screen and (max-width: 430px){
   .logo {
     width: 70px;
